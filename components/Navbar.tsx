@@ -62,9 +62,7 @@ export default function Navbar() {
               G
             </motion.div>
             <div>
-              <div className="text-sm font-bold text-slate-900">
-                Greenfield
-              </div>
+              <div className="text-sm font-bold text-slate-900">Greenfield</div>
               <div className="text-xs font-medium text-blue-600">
                 International Academy
               </div>
@@ -131,7 +129,7 @@ export default function Navbar() {
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 top-16 z-40 md:hidden bg-white/95 backdrop-blur-2xl"
+        className="fixed inset-0 top-16 z-40 md:hidden bg-white backdrop-blur-2xl"
       >
         {/* Gradient background elements */}
         <motion.div
@@ -230,9 +228,7 @@ export default function Navbar() {
               <p className="text-sm font-medium text-slate-900 mb-1">
                 admissions@greenfield.edu
               </p>
-              <p className="text-sm text-slate-600">
-                +966 5555 5555
-              </p>
+              <p className="text-sm text-slate-600">+966 5555 5555</p>
             </motion.div>
           </motion.div>
         </div>
