@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[70vh] md:min-h-screen bg-white dark:bg-slate-950 overflow-hidden pt-12 sm:pt-15 scroll-mt-32"
+      className="relative w-full min-h-[70vh] md:min-h-[60vh] bg-white dark:bg-slate-950 overflow-hidden pt-12 sm:pt-15 scroll-mt-32"
     >
       <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-600 via-amber-500 to-blue-600" />
       <motion.div
