@@ -6,19 +6,16 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[70vh] md:min-h-[60vh] bg-white dark:bg-slate-950 overflow-hidden pt-12 sm:pt-15 scroll-mt-32"
+      className="relative w-full min-h-[70vh] md:min-h-[60vh] overflow-hidden pt-12 sm:pt-15 scroll-mt-32 bg-slate-950"
+      style={{
+        backgroundImage: "url('/images/children.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-600 via-amber-500 to-blue-600" />
-      <motion.div
-        className="hidden sm:block absolute -top-40 -left-40 w-72 h-72 rounded-full bg-blue-50 dark:bg-blue-950/20 opacity-40 blur-3xl"
-        animate={{ scale: [1, 1.07, 1], rotate: [0, 180, 360] }}
-        transition={{ duration: 20, repeat: Infinity }}
-      />
-      <motion.div
-        className="hidden sm:block absolute -bottom-20 -right-40 w-96 h-96 rounded-full bg-amber-50 dark:bg-amber-950/20 opacity-30 blur-3xl"
-        animate={{ scale: [1.05, 1, 1.05], rotate: [360, 180, 0] }}
-        transition={{ duration: 25, repeat: Infinity }}
-      />
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/25 to-black/55" />
 
       <div className="relative z-10">
         <div className="mx-auto max-w-3xl px-6 py-10 sm:py-14 lg:py-20">
@@ -34,7 +31,7 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="inline-block mb-4"
             >
-              <span className="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+              <span className="text-xs sm:text-sm font-semibold text-white/90 uppercase tracking-widest drop-shadow-lg">
                 Welcome to Greenfield
               </span>
             </motion.div>
@@ -43,7 +40,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-3 sm:mb-6 leading-tight"
+              className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-3 sm:mb-6 leading-tight drop-shadow-lg"
             >
               Shaping Future
               <motion.span className="block bg-linear-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent">
@@ -55,7 +52,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed"
+              className="text-base sm:text-lg text-white/95 mb-6 sm:mb-8 leading-relaxed drop-shadow-lg"
             >
               At Greenfield International Academy, we nurture curious minds,
               build strong character, and prepare students for success in a
@@ -77,7 +74,7 @@ export default function Hero() {
                   boxShadow: "0 18px 36px rgba(37, 99, 235, 0.18)",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-md sm:rounded-lg font-semibold hover:shadow-lg transition-all mb-2 sm:mb-0"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-md sm:rounded-lg font-semibold hover:shadow-lg transition-all mb-2 sm:mb-0 shadow-xl"
               >
                 <span>Apply Now</span>
                 <ArrowRight size={18} />
@@ -88,7 +85,7 @@ export default function Hero() {
                 aria-label="Learn More"
                 whileHover={{ scale: 1.04, borderColor: "#2563eb" }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-md sm:rounded-lg font-semibold bg-slate-50 dark:bg-slate-800 hover:bg-white dark:hover:bg-slate-700 transition-all"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 border-2 border-white/80 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-md sm:rounded-lg font-semibold bg-transparent hover:bg-white/10 transition-all drop-shadow-lg"
               >
                 <span>Learn More</span>
                 <ArrowRight size={18} />
