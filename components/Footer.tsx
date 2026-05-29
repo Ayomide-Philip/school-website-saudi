@@ -17,8 +17,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <footer
+      className="relative text-white"
+      style={{
+        backgroundImage: "url('/images/online/footer.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-slate-900/75" />
+      <div className="mx-auto max-w-7xl px-6 py-16 relative z-10">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

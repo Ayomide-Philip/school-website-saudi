@@ -13,7 +13,11 @@ export default function CTA() {
           viewport={{ once: true }}
           className="relative rounded-3xl overflow-hidden shadow-2xl"
         >
-          <div className="absolute inset-0 bg-linear-to-r from-blue-900 via-blue-800 to-blue-700" />
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/online/cta.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-blue-900/75 via-blue-800/65 to-blue-700/75" />
           <div className="absolute inset-0 opacity-10 bg-pattern" />
 
           <div className="relative z-10 px-8 py-16 md:px-12 md:py-20">
