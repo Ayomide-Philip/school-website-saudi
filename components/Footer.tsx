@@ -119,11 +119,11 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email"
                 aria-label="Email for newsletter"
-                className="flex-1 rounded-lg px-4 py-2 text-slate-900 text-sm"
+                className="flex-1 rounded-lg px-4 py-2 text-slate-900 dark:text-white dark:bg-slate-800 dark:border dark:border-slate-700 text-sm"
               />
               <button
                 type="submit"
-                className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition"
+                className="rounded-lg bg-blue-600 dark:bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-700 dark:hover:bg-blue-600 transition"
               >
                 <Mail size={18} />
               </button>

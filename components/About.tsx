@@ -15,17 +15,17 @@ function CoreValue({
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      className="bg-linear-to-br from-white to-slate-50 rounded-xl p-6 border border-slate-200 shadow-md hover:shadow-lg transition-all"
+      className="bg-linear-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-lg transition-all"
     >
       <motion.div
         animate={{ rotate: [0, 5, -5, 0] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="inline-block p-3 bg-linear-to-br from-amber-100 to-amber-50 rounded-lg mb-4"
+        className="inline-block p-3 bg-linear-to-br from-amber-100 to-amber-50 dark:from-amber-900/30 dark:to-amber-800/20 rounded-lg mb-4"
       >
-        <Icon size={24} className="text-amber-600" />
+        <Icon size={24} className="text-amber-600 dark:text-amber-400" />
       </motion.div>
-      <h4 className="text-lg font-bold text-slate-900 mb-2">{title}</h4>
-      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+      <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h4>
+      <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{description}</p>
     </motion.div>
   );
 }
@@ -34,15 +34,15 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full bg-white py-20 relative overflow-hidden"
+      className="w-full bg-white dark:bg-slate-900 py-20 relative overflow-hidden"
     >
       <motion.div
-        className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-blue-50 opacity-40 blur-3xl"
+        className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-blue-50 dark:bg-blue-950/20 opacity-40 blur-3xl"
         animate={{ scale: [1, 1.05, 1], rotate: [0, 90, 180] }}
         transition={{ duration: 20, repeat: Infinity }}
       />
       <motion.div
-        className="absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-amber-50 opacity-30 blur-3xl"
+        className="absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-amber-50 dark:bg-amber-950/20 opacity-30 blur-3xl"
         animate={{ scale: [1.05, 1, 1.05], rotate: [180, 90, 0] }}
         transition={{ duration: 25, repeat: Infinity }}
       />
@@ -55,10 +55,10 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-4">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">
             Our Story
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Building a legacy of excellence, innovation, and character
             development
           </p>
@@ -82,12 +82,12 @@ export default function About() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute bottom-8 left-8 bg-white/95 backdrop-blur rounded-2xl p-6 shadow-xl max-w-xs"
+              className="absolute bottom-8 left-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-2xl p-6 shadow-xl max-w-xs"
             >
-              <p className="text-sm font-semibold text-slate-900 mb-1">
+              <p className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
                 Est. 1995
               </p>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-slate-600 dark:text-slate-400">
                 30 years of transforming education
               </p>
             </motion.div>
@@ -102,13 +102,13 @@ export default function About() {
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Target size={24} className="text-blue-500" />
+                <Target size={24} className="text-blue-500 dark:text-blue-400" />
 
-                <h3 className="text-2xl font-bold text-slate-900">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
                   Our Mission
                 </h3>
               </div>
-              <p className="text-slate-700 leading-relaxed text-lg">
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
                 To provide a world-class education that nurtures intellectual
                 curiosity, inspires innovation, and develops confident,
                 compassionate leaders prepared to make a meaningful impact on a
@@ -118,13 +118,13 @@ export default function About() {
 
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Eye size={24} className="text-blue-500" />
+                <Eye size={24} className="text-blue-500 dark:text-blue-400" />
 
-                <h3 className="text-2xl font-bold text-slate-900">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
                   Our Vision
                 </h3>
               </div>
-              <p className="text-slate-700 leading-relaxed text-lg">
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
                 To be recognized globally as a beacon of educational excellence,
                 where diverse learners flourish through transformative teaching,
                 cutting-edge facilities, and a thriving community of scholars
@@ -141,7 +141,7 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-slate-900 mb-10 text-center">
+          <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 text-center">
             Core Values
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

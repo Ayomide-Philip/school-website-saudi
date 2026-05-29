@@ -32,7 +32,7 @@ const programs = [
 
 export default function Programs() {
   return (
-    <section id="academics" className="w-full bg-white">
+    <section id="academics" className="w-full bg-white dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,10 +41,10 @@ export default function Programs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-4xl font-bold text-slate-900">
+          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">
             Academic Programs
           </h3>
-          <p className="mt-4 text-xl text-slate-600">
+          <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
             Curated programs designed to unlock each student&apos;s potential
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ export default function Programs() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
-              className="group rounded-2xl bg-white p-8 shadow-lg border border-slate-100 overflow-hidden"
+              className="group rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg border border-slate-100 dark:border-slate-700 overflow-hidden"
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${program.color} opacity-0 group-hover:opacity-5 transition-opacity`}
@@ -70,14 +70,14 @@ export default function Programs() {
                 <div className="w-6 h-6" />
               </div>
 
-              <h4 className="mt-6 text-xl font-semibold text-slate-900">
+              <h4 className="mt-6 text-xl font-semibold text-slate-900 dark:text-white">
                 {program.title}
               </h4>
-              <p className="mt-3 text-slate-600">{program.description}</p>
+              <p className="mt-3 text-slate-600 dark:text-slate-400">{program.description}</p>
 
               <a
                 href="#"
-                className="mt-6 inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group/link"
+                className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
               >
                 Learn more
                 <ArrowRight

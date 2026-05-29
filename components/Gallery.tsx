@@ -12,7 +12,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="w-full bg-slate-50">
+    <section id="gallery" className="w-full bg-slate-50 dark:bg-slate-800">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,8 +21,8 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-4xl font-bold text-slate-900">Campus Gallery</h3>
-          <p className="mt-4 text-xl text-slate-600">
+          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">Campus Gallery</h3>
+          <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
             A glimpse into the vibrant life at Greenfield
           </p>
         </motion.div>
@@ -36,7 +36,7 @@ export default function Gallery() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="group relative overflow-hidden rounded-2xl bg-slate-100 h-48 shadow-md"
+              className="group relative overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-700 h-48 shadow-md"
             >
               <img
                 src={image.src}

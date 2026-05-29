@@ -131,19 +131,8 @@ export default function Navbar() {
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 top-16 z-40 md:hidden bg-white backdrop-blur-2xl"
+        className="fixed inset-0 top-16 z-40 md:hidden bg-white"
       >
-        {/* Gradient background elements */}
-        <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-blue-50 opacity-40 blur-3xl pointer-events-none"
-          animate={{ scale: [1, 1.1, 1], rotate: [0, 90, 180] }}
-          transition={{ duration: 20, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-amber-50 opacity-30 blur-3xl pointer-events-none"
-          animate={{ scale: [1.1, 1, 1.1], rotate: [180, 90, 0] }}
-          transition={{ duration: 25, repeat: Infinity }}
-        />
 
         {/* Menu content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-8">

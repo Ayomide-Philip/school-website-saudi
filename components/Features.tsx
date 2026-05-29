@@ -44,7 +44,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,8 +53,8 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-4xl font-bold text-slate-900">Why Choose Us</h3>
-          <p className="mt-4 text-xl text-slate-600">
+          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">Why Choose Us</h3>
+          <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
             A holistic education experience with premium facilities and a
             passionate faculty
           </p>
@@ -69,15 +69,15 @@ export default function Features() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-              className="rounded-2xl bg-white p-8 shadow-lg border border-slate-100 transition-all"
+              className="rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg border border-slate-100 dark:border-slate-700 transition-all"
             >
               <div className="rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 p-4 w-fit">
                 <feature.icon className="text-white" size={28} />
               </div>
-              <h4 className="mt-4 text-xl font-semibold text-slate-900">
+              <h4 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">
                 {feature.title}
               </h4>
-              <p className="mt-2 text-slate-600">{feature.description}</p>
+              <p className="mt-2 text-slate-600 dark:text-slate-400">{feature.description}</p>
             </motion.div>
           ))}
         </div>

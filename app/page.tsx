@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-sans text-slate-900 antialiased bg-white">
+    <div className="font-sans text-slate-900 dark:text-white antialiased bg-white dark:bg-slate-950">
       <Navbar />
       <main className="pt-16">
         <Hero />
