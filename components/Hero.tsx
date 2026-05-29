@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[70vh] md:min-h-screen bg-white dark:bg-slate-950 overflow-hidden pt-28 sm:pt-32 scroll-mt-32"
+      className="relative w-full min-h-[70vh] md:min-h-screen bg-white dark:bg-slate-950 overflow-hidden pt-12 sm:pt-15 scroll-mt-32"
     >
       <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-600 via-amber-500 to-blue-600" />
       <motion.div
@@ -26,7 +26,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-xl mx-auto text-center mb-8 sm:mb-14"
+            className="max-w-xl mx-auto text-center mb-8 sm:mb-10"
           >
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -43,7 +43,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-3 sm:mb-6 leading-tight"
+              className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-3 sm:mb-6 leading-tight"
             >
               Shaping Future
               <motion.span className="block bg-linear-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent">
