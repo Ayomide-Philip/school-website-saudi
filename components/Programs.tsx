@@ -73,7 +73,9 @@ export default function Programs() {
               <h4 className="mt-6 text-xl font-semibold text-slate-900 dark:text-white">
                 {program.title}
               </h4>
-              <p className="mt-3 text-slate-600 dark:text-slate-400">{program.description}</p>
+              <p className="mt-3 text-slate-600 dark:text-slate-400">
+                {program.description}
+              </p>
 
               <a
                 href="#"

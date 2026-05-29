@@ -133,7 +133,6 @@ export default function Navbar() {
         transition={{ duration: 0.3 }}
         className="fixed inset-0 top-16 z-40 md:hidden bg-white"
       >
-
         {/* Menu content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-8">
           <motion.div

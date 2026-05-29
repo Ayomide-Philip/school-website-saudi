@@ -21,7 +21,9 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">Campus Gallery</h3>
+          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">
+            Campus Gallery
+          </h3>
           <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
             A glimpse into the vibrant life at Greenfield
           </p>

@@ -24,8 +24,12 @@ function CoreValue({
       >
         <Icon size={24} className="text-amber-600 dark:text-amber-400" />
       </motion.div>
-      <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h4>
-      <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{description}</p>
+      <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+        {title}
+      </h4>
+      <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+        {description}
+      </p>
     </motion.div>
   );
 }
@@ -102,7 +106,10 @@ export default function About() {
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Target size={24} className="text-blue-500 dark:text-blue-400" />
+                <Target
+                  size={24}
+                  className="text-blue-500 dark:text-blue-400"
+                />
 
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
                   Our Mission

@@ -53,7 +53,9 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">Why Choose Us</h3>
+          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">
+            Why Choose Us
+          </h3>
           <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
             A holistic education experience with premium facilities and a
             passionate faculty
@@ -77,7 +79,9 @@ export default function Features() {
               <h4 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">
                 {feature.title}
               </h4>
-              <p className="mt-2 text-slate-600 dark:text-slate-400">{feature.description}</p>
+              <p className="mt-2 text-slate-600 dark:text-slate-400">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>
