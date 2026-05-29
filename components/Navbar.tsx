@@ -16,28 +16,50 @@ export default function Navbar() {
               G
             </div>
             <div>
-              <div className="text-sm font-semibold text-slate-900">Greenfield</div>
-              <div className="text-xs text-slate-500">International Academy</div>
+              <div className="text-sm font-semibold text-slate-900">
+                Greenfield
+              </div>
+              <div className="text-xs text-slate-500">
+                International Academy
+              </div>
             </div>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <a href="#home" className="text-sm text-slate-700 hover:text-blue-600 transition">
+            <a
+              href="#home"
+              className="text-sm text-slate-700 hover:text-blue-600 transition"
+            >
               Home
             </a>
-            <a href="#about" className="text-sm text-slate-700 hover:text-blue-600 transition">
+            <a
+              href="#about"
+              className="text-sm text-slate-700 hover:text-blue-600 transition"
+            >
               About
             </a>
-            <a href="#academics" className="text-sm text-slate-700 hover:text-blue-600 transition">
+            <a
+              href="#academics"
+              className="text-sm text-slate-700 hover:text-blue-600 transition"
+            >
               Academics
             </a>
-            <a href="#admissions" className="text-sm text-slate-700 hover:text-blue-600 transition">
+            <a
+              href="#admissions"
+              className="text-sm text-slate-700 hover:text-blue-600 transition"
+            >
               Admissions
             </a>
-            <a href="#gallery" className="text-sm text-slate-700 hover:text-blue-600 transition">
+            <a
+              href="#gallery"
+              className="text-sm text-slate-700 hover:text-blue-600 transition"
+            >
               Gallery
             </a>
-            <a href="#contact" className="text-sm text-slate-700 hover:text-blue-600 transition">
+            <a
+              href="#contact"
+              className="text-sm text-slate-700 hover:text-blue-600 transition"
+            >
               Contact
             </a>
           </nav>
