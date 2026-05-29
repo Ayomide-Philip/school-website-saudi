@@ -1,94 +1,106 @@
 "use client";
 import { motion } from "framer-motion";
+import { ArrowRight, BookOpen, Users, Award } from "lucide-react";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full bg-gradient-to-b from-white via-blue-50 to-slate-100"
+      className="relative w-full min-h-screen bg-white overflow-hidden pt-20"
     >
-      <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-blue-100 to-transparent pointer-events-none" />
+      {/* Top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-blue-600" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+      {/* Decorative blobs */}
+      <motion.div
+        className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-blue-50 opacity-40 blur-3xl"
+        animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 360] }}
+        transition={{ duration: 20, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute -bottom-20 -right-40 w-96 h-96 rounded-full bg-amber-50 opacity-30 blur-3xl"
+        animate={{ scale: [1.1, 1, 1.1], rotate: [360, 180, 0] }}
+        transition={{ duration: 25, repeat: Infinity }}
+      />
+
+      <div className="relative z-10">
+        {/* Main content container */}
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          {/* Top section with headline and description */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-2xl flex-1"
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center mb-16"
           >
-            <h1 className="text-5xl font-extrabold leading-tight text-slate-900 md:text-6xl">
-              Shaping Future Leaders Through Excellence
-            </h1>
-            <p className="mt-6 text-lg text-slate-700">
-              At Greenfield International Academy we blend rigorous academics,
-              innovative learning, and strong character-building to prepare
-              students for global leadership and positive impact.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
+            {/* Small label */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-block mb-6"
+            >
+              <span className="text-sm font-semibold text-blue-600 uppercase tracking-widest">
+                Welcome to Greenfield
+              </span>
+            </motion.div>
+
+            {/* Main headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight"
+            >
+              Shaping Future
+              <motion.span className="block bg-gradient-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent">
+                Leaders Globally
+              </motion.span>
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto"
+            >
+              At Greenfield International Academy, we nurture curious minds,
+              build strong character, and prepare students for success in a
+              rapidly changing world. Excellence in academics, arts, and
+              athletics.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <motion.a
                 href="#admissions"
-                className="rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-lg hover:bg-blue-700 transition-all hover:scale-105"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(37, 99, 235, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all"
               >
-                Apply Now
-              </a>
-              <a
+                <span>Apply Now</span>
+                <ArrowRight size={20} />
+              </motion.a>
+
+              <motion.a
                 href="#about"
-                className="rounded-full border-2 border-slate-300 px-8 py-3 text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 transition-all"
+                whileHover={{ scale: 1.05, borderColor: "#2563eb" }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 border-2 border-slate-300 text-slate-900 px-8 py-4 rounded-lg font-semibold bg-slate-50 hover:bg-white transition-all"
               >
-                Explore Campus
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative flex-1 h-96"
-          >
-            <div className="absolute right-0 top-0 flex w-full max-w-sm flex-col gap-4">
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="rounded-2xl bg-white/95 p-6 shadow-lg backdrop-blur"
-              >
-                <div className="text-sm text-slate-500 font-medium">
-                  Total Students
-                </div>
-                <div className="mt-2 text-3xl font-bold text-blue-600">
-                  5000+
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                className="rounded-2xl bg-white/95 p-6 shadow-lg backdrop-blur"
-              >
-                <div className="text-sm text-slate-500 font-medium">
-                  Success Rate
-                </div>
-                <div className="mt-2 text-3xl font-bold text-amber-600">
-                  98%
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                className="rounded-2xl bg-white/95 p-6 shadow-lg backdrop-blur"
-              >
-                <div className="text-sm text-slate-500 font-medium">
-                  Expert Faculty
-                </div>
-                <div className="mt-2 text-3xl font-bold text-emerald-600">
-                  50+
-                </div>
-              </motion.div>
-            </div>
-
-            <div className="absolute bottom-0 right-0 h-72 w-72 rounded-3xl bg-gradient-to-br from-blue-200 via-blue-100 to-white shadow-2xl" />
+                <span>Learn More</span>
+                <ArrowRight size={20} />
+              </motion.a>
+            </motion.div>
           </motion.div>
         </div>
       </div>

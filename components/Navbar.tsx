@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="#" className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-900 to-blue-600 flex items-center justify-center text-white font-semibold text-sm">
+            <div className="h-10 w-10 rounded-full bg-linear-to-br from-blue-900 to-blue-600 flex items-center justify-center text-white font-semibold text-sm">
               G
             </div>
             <div>
