@@ -77,11 +77,11 @@ export default function About() {
             className="relative rounded-3xl overflow-hidden shadow-2xl"
           >
             <img
-              src="/images/about.svg"
+              src="/images/online/about-campus.jpg"
               alt="Greenfield Academy Campus"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-slate-900/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-900/30 via-transparent to-transparent" />
 
             <motion.div
               animate={{ y: [0, -10, 0] }}

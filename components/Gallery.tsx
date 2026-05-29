@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const images = [
-  { src: "/images/gallery-1.svg", label: "Classrooms" },
-  { src: "/images/gallery-2.svg", label: "Laboratory" },
-  { src: "/images/gallery-3.svg", label: "Sports" },
-  { src: "/images/gallery-4.svg", label: "Events" },
-  { src: "/images/gallery-5.svg", label: "Assembly" },
-  { src: "/images/gallery-6.svg", label: "Graduation" },
+  { src: "/images/online/features-students.jpg", label: "Classrooms" },
+  { src: "/images/online/features-kids.jpg", label: "Laboratory" },
+  { src: "/images/online/hero-school.jpg", label: "Sports" },
+  { src: "/images/online/about-campus.jpg", label: "Events" },
+  { src: "/images/online/program-studio.jpg", label: "Assembly" },
+  { src: "/images/online/cta.jpg", label: "Graduation" },
 ];
 
 export default function Gallery() {
