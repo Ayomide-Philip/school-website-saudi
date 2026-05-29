@@ -112,7 +112,7 @@ export default function Navbar() {
                 href="#apply"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
+                className="hidden rounded-full bg-linear-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
               >
                 Apply Now
               </motion.a>
@@ -212,26 +212,6 @@ export default function Navbar() {
             >
               Apply Now
             </motion.a>
-
-            {/* <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{
-                opacity: open ? 1 : 0,
-                y: open ? 0 : 10,
-              }}
-              transition={{ delay: 0.5 }}
-              className="rounded-xl bg-white/50 dark:bg-slate-800/60 backdrop-blur border border-slate-200 dark:border-slate-700 px-6 py-4 mt-8"
-            >
-              <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">
-                Contact Us
-              </p>
-              <p className="text-sm font-medium text-slate-900 dark:text-slate-200 mb-1">
-                admissions@greenfield.edu
-              </p>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                +966 5555 5555
-              </p>
-            </motion.div> */}
           </motion.div>
         </div>
       </motion.div>
