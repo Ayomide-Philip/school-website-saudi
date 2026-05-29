@@ -112,7 +112,7 @@ export default function Navbar() {
                 href="#apply"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hidden rounded-full bg-linear-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
+                className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
               >
                 Apply Now
               </motion.a>
@@ -148,12 +148,12 @@ export default function Navbar() {
         >
           <X size={20} />
         </button>
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 pt-24">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 pt-16 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: open ? 1 : 0, y: open ? 0 : 20 }}
             transition={{ delay: 0.1 }}
-            className="space-y-2"
+            className="space-y-1"
           >
             {navLinks.map((link, index) => (
               <motion.a
@@ -169,7 +169,7 @@ export default function Navbar() {
                   delay: open ? 0.1 + index * 0.05 : 0,
                   duration: 0.3,
                 }}
-                className={`group block rounded-lg px-6 py-4 text-lg font-semibold transition-all ${
+                className={`group block rounded-lg px-3 py-2 text-sm sm:px-6 sm:py-4 sm:text-lg sm:font-semibold transition-all ${
                   activeLink === link.href
                     ? "bg-linear-to-r from-blue-600 to-blue-700 text-white shadow-lg"
                     : "text-slate-900 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
@@ -197,21 +197,6 @@ export default function Navbar() {
               className="h-px bg-linear-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent my-6"
             />
 
-            {/* <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{
-                opacity: open ? 1 : 0,
-                y: open ? 0 : 10,
-              }}
-              transition={{ delay: 0.38 }}
-              className="flex items-center justify-between px-2"
-            >
-              <span className="text-sm font-medium text-slate-900 dark:text-slate-200">
-                Dark Mode
-              </span>
-              <Toggle />
-            </motion.div> */}
-
             <motion.a
               href="#apply"
               onClick={() => handleNavClick("#apply")}
@@ -223,12 +208,12 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="block w-full rounded-full bg-linear-to-r from-blue-600 via-blue-600 to-blue-700 dark:from-blue-600 dark:via-blue-600 dark:to-blue-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all"
+              className="block w-full rounded-md bg-linear-to-r from-blue-600 via-blue-600 to-blue-700 dark:from-blue-600 dark:via-blue-600 dark:to-blue-700 px-4 py-2 text-center text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all"
             >
               Apply Now
             </motion.a>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{
                 opacity: open ? 1 : 0,
@@ -246,7 +231,7 @@ export default function Navbar() {
               <p className="text-sm text-slate-600 dark:text-slate-400">
                 +966 5555 5555
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </motion.div>
