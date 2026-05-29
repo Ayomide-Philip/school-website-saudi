@@ -11,12 +11,18 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = useState("#home");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("keydown", handleKey);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKey);
+    };
   }, []);
 
   const navLinks = [
@@ -34,95 +40,103 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg"
-          : "bg-white/70 dark:bg-transparent backdrop-blur-md"
-      }`}
-    >
-      {/* Top bar with border */}
-      <div
-        className={`h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-blue-600 ${
-          scrolled ? "opacity-100" : "opacity-50"
-        } transition-opacity duration-300`}
-      />
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/90 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg"
+            : "bg-white/70 dark:bg-transparent backdrop-blur-md"
+        }`}
+      >
+        {/* Top bar with border */}
+        <div
+          className={`h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-blue-600 ${
+            scrolled ? "opacity-100" : "opacity-50"
+          } transition-opacity duration-300`}
+        />
 
-      <div className="mx-auto max-w-7xl px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link
-            href="#"
-            className="flex items-center gap-3 group cursor-pointer"
-            onClick={() => handleNavClick("#home")}
-          >
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className="h-11 w-11 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-lg shadow-lg"
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link
+              href="#"
+              className="flex items-center gap-3 group cursor-pointer"
+              onClick={() => handleNavClick("#home")}
             >
-              G
-            </motion.div>
-            <div>
-              <div className="text-sm font-bold text-slate-900 dark:text-white">Greenfield</div>
-              <div className="text-xs font-medium text-blue-600 dark:text-blue-300">
-                International Academy
-              </div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 md:flex">
-            {navLinks.map((link) => (
-              <motion.a
-                key={link.href}
-                href={link.href}
-                onClick={() => handleNavClick(link.href)}
-                whileHover={{ y: -2 }}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                  activeLink === link.href
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
-                }`}
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="h-11 w-11 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-lg shadow-lg"
               >
-                {link.label}
-                {activeLink === link.href && (
-                  <motion.div
-                    layoutId="activeLink"
-                    className="absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-blue-600 to-amber-500"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
+                G
+              </motion.div>
+              <div>
+                <div className="text-sm font-bold text-slate-900 dark:text-white">
+                  Greenfield
+                </div>
+                <div className="text-xs font-medium text-blue-600 dark:text-blue-300">
+                  International Academy
+                </div>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden items-center gap-1 md:flex">
+              {navLinks.map((link) => (
+                <motion.a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => handleNavClick(link.href)}
+                  whileHover={{ y: -2 }}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                    activeLink === link.href
+                      ? "text-blue-600 dark:text-blue-400"
+                      : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
+                  }`}
+                >
+                  {link.label}
+                  {activeLink === link.href && (
+                    <motion.div
+                      layoutId="activeLink"
+                      className="absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-blue-600 to-amber-500"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                </motion.a>
+              ))}
+            </nav>
+
+            {/* Right section */}
+            <div className="flex items-center gap-4">
+              <Toggle />
+              <motion.a
+                href="#apply"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
+              >
+                Apply Now
               </motion.a>
-            ))}
-          </nav>
 
-          {/* Right section */}
-          <div className="flex items-center gap-4">
-            <Toggle />
-            <motion.a
-              href="#apply"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
-            >
-              Apply Now
-            </motion.a>
-
-            {/* Mobile menu button */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="md:hidden p-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              onClick={() => setOpen(!open)}
-              aria-label={open ? "Close menu" : "Open menu"}
-            >
-              {open ? <X size={26} /> : <Menu size={26} />}
-            </motion.button>
+              {/* Mobile menu button */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="md:hidden p-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                onClick={() => setOpen(!open)}
+                aria-label={open ? "Close menu" : "Open menu"}
+              >
+                {open ? <X size={26} /> : <Menu size={26} />}
+              </motion.button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Full-screen Mobile Menu */}
+      {/* Full-screen Mobile Menu (outside header so fixed covers viewport) */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{
@@ -131,10 +145,18 @@ export default function Navbar() {
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 top-16 z-40 md:hidden bg-white dark:bg-slate-900"
+        className="fixed inset-0 z-50 md:hidden bg-white dark:bg-slate-900"
       >
+        {/* Close button inside overlay */}
+        <button
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+          className="absolute top-4 right-4 p-3 rounded-full bg-white dark:bg-slate-800 shadow-md text-slate-700 dark:text-slate-200 z-50"
+        >
+          <X size={20} />
+        </button>
         {/* Menu content */}
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 pt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: open ? 1 : 0, y: open ? 0 : 20 }}
@@ -177,7 +199,6 @@ export default function Navbar() {
               </motion.a>
             ))}
 
-            {/* Divider */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: open ? 1 : 0 }}
@@ -185,7 +206,6 @@ export default function Navbar() {
               className="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent my-6"
             />
 
-            {/* Theme toggle */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{
@@ -201,7 +221,6 @@ export default function Navbar() {
               <Toggle />
             </motion.div>
 
-            {/* Apply button */}
             <motion.a
               href="#apply"
               onClick={() => handleNavClick("#apply")}
@@ -218,7 +237,6 @@ export default function Navbar() {
               Apply Now
             </motion.a>
 
-            {/* Contact info */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{
@@ -234,11 +252,13 @@ export default function Navbar() {
               <p className="text-sm font-medium text-slate-900 dark:text-slate-200 mb-1">
                 admissions@greenfield.edu
               </p>
-              <p className="text-sm text-slate-600 dark:text-slate-400">+966 5555 5555</p>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                +966 5555 5555
+              </p>
             </motion.div>
           </motion.div>
         </div>
       </motion.div>
-    </header>
+    </>
   );
 }
