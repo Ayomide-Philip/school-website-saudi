@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
@@ -83,7 +84,7 @@ export default function Testimonials() {
               </div>
 
               <p className="mt-4 text-slate-700 dark:text-slate-300">
-                "{testimonial.text}"
+                &quot;{testimonial.text}&quot;
               </p>
             </motion.div>
           ))}

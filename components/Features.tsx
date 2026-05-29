@@ -73,7 +73,7 @@ export default function Features() {
               whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
               className="rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg border border-slate-100 dark:border-slate-700 transition-all"
             >
-              <div className="rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 p-4 w-fit">
+              <div className="rounded-lg bg-linear-to-br from-blue-600 to-blue-700 p-4 w-fit">
                 <feature.icon className="text-white" size={28} />
               </div>
               <h4 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">

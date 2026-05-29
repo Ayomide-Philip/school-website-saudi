@@ -61,11 +61,11 @@ export default function Programs() {
               className="group rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg border border-slate-100 dark:border-slate-700 overflow-hidden"
             >
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${program.color} opacity-0 group-hover:opacity-5 transition-opacity`}
+                className={`absolute inset-0 bg-linear-to-br ${program.color} opacity-0 group-hover:opacity-5 transition-opacity`}
               />
 
               <div
-                className={`inline-block rounded-lg bg-gradient-to-br ${program.color} p-3 text-white`}
+                className={`inline-block rounded-lg bg-linear-to-br ${program.color} p-3 text-white`}
               >
                 <div className="w-6 h-6" />
               </div>
