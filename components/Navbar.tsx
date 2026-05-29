@@ -207,7 +207,9 @@ export default function Navbar() {
               transition={{ delay: 0.38 }}
               className="flex items-center justify-between px-2"
             >
-              <span className="text-sm font-medium text-slate-900">Dark Mode</span>
+              <span className="text-sm font-medium text-slate-900">
+                Dark Mode
+              </span>
               <Toggle />
             </motion.div>
 
