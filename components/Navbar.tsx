@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import Toggle from "./toggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -97,6 +98,7 @@ export default function Navbar() {
 
           {/* Right section */}
           <div className="flex items-center gap-4">
+            <Toggle />
             <motion.a
               href="#apply"
               whileHover={{ scale: 1.05 }}
@@ -194,6 +196,20 @@ export default function Navbar() {
               transition={{ delay: 0.35 }}
               className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-6"
             />
+
+            {/* Theme toggle */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{
+                opacity: open ? 1 : 0,
+                y: open ? 0 : 10,
+              }}
+              transition={{ delay: 0.38 }}
+              className="flex items-center justify-between px-2"
+            >
+              <span className="text-sm font-medium text-slate-900">Dark Mode</span>
+              <Toggle />
+            </motion.div>
 
             {/* Apply button */}
             <motion.a
