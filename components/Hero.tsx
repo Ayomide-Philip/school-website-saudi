@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Users, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
       className="relative w-full min-h-screen bg-white overflow-hidden pt-20"
     >
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-blue-600" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-600 via-amber-500 to-blue-600" />
 
       {/* Decorative blobs */}
       <motion.div
@@ -53,7 +53,7 @@ export default function Hero() {
               className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight"
             >
               Shaping Future
-              <motion.span className="block bg-gradient-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent">
+              <motion.span className="block bg-linear-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent">
                 Leaders Globally
               </motion.span>
             </motion.h1>
@@ -85,7 +85,7 @@ export default function Hero() {
                   boxShadow: "0 20px 40px rgba(37, 99, 235, 0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all"
+                className="inline-flex items-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all"
               >
                 <span>Apply Now</span>
                 <ArrowRight size={20} />
