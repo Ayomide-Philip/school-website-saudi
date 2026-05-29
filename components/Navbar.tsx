@@ -37,8 +37,8 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-lg"
-          : "bg-white/70 backdrop-blur-md"
+          ? "bg-white/90 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg"
+          : "bg-white/70 dark:bg-transparent backdrop-blur-md"
       }`}
     >
       {/* Top bar with border */}
@@ -63,8 +63,8 @@ export default function Navbar() {
               G
             </motion.div>
             <div>
-              <div className="text-sm font-bold text-slate-900">Greenfield</div>
-              <div className="text-xs font-medium text-blue-600">
+              <div className="text-sm font-bold text-slate-900 dark:text-white">Greenfield</div>
+              <div className="text-xs font-medium text-blue-600 dark:text-blue-300">
                 International Academy
               </div>
             </div>
@@ -80,8 +80,8 @@ export default function Navbar() {
                 whileHover={{ y: -2 }}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeLink === link.href
-                    ? "text-blue-600"
-                    : "text-slate-700 hover:text-blue-600"
+                    ? "text-blue-600 dark:text-blue-400"
+                    : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
                 }`}
               >
                 {link.label}
@@ -103,7 +103,7 @@ export default function Navbar() {
               href="#apply"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
+              className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
             >
               Apply Now
             </motion.a>
@@ -112,7 +112,7 @@ export default function Navbar() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="md:hidden p-2 text-slate-700 hover:text-blue-600 transition-colors"
+              className="md:hidden p-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               onClick={() => setOpen(!open)}
               aria-label={open ? "Close menu" : "Open menu"}
             >
@@ -131,7 +131,7 @@ export default function Navbar() {
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 top-16 z-40 md:hidden bg-white"
+        className="fixed inset-0 top-16 z-40 md:hidden bg-white dark:bg-slate-900"
       >
         {/* Menu content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-8">
@@ -159,7 +159,7 @@ export default function Navbar() {
                 className={`group block rounded-lg px-6 py-4 text-lg font-semibold transition-all ${
                   activeLink === link.href
                     ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg"
-                    : "text-slate-900 hover:bg-slate-100"
+                    : "text-slate-900 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -182,7 +182,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: open ? 1 : 0 }}
               transition={{ delay: 0.35 }}
-              className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-6"
+              className="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent my-6"
             />
 
             {/* Theme toggle */}
@@ -195,7 +195,7 @@ export default function Navbar() {
               transition={{ delay: 0.38 }}
               className="flex items-center justify-between px-2"
             >
-              <span className="text-sm font-medium text-slate-900">
+              <span className="text-sm font-medium text-slate-900 dark:text-slate-200">
                 Dark Mode
               </span>
               <Toggle />
@@ -213,7 +213,7 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="block w-full rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all"
+              className="block w-full rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 dark:from-blue-600 dark:via-blue-600 dark:to-blue-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all"
             >
               Apply Now
             </motion.a>
@@ -226,15 +226,15 @@ export default function Navbar() {
                 y: open ? 0 : 10,
               }}
               transition={{ delay: 0.5 }}
-              className="rounded-xl bg-white/50 backdrop-blur border border-slate-200 px-6 py-4 mt-8"
+              className="rounded-xl bg-white/50 dark:bg-slate-800/60 backdrop-blur border border-slate-200 dark:border-slate-700 px-6 py-4 mt-8"
             >
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">
+              <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">
                 Contact Us
               </p>
-              <p className="text-sm font-medium text-slate-900 mb-1">
+              <p className="text-sm font-medium text-slate-900 dark:text-slate-200 mb-1">
                 admissions@greenfield.edu
               </p>
-              <p className="text-sm text-slate-600">+966 5555 5555</p>
+              <p className="text-sm text-slate-600 dark:text-slate-400">+966 5555 5555</p>
             </motion.div>
           </motion.div>
         </div>
