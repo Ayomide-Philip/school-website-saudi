@@ -38,7 +38,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full bg-white dark:bg-slate-900 py-20 relative overflow-hidden"
+      className="w-full bg-white dark:bg-slate-900 py-10 relative overflow-hidden"
     >
       <motion.div
         className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-blue-50 dark:bg-blue-950/20 opacity-40 blur-3xl"
@@ -146,7 +146,6 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-16"
         >
           <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 text-center">
             Core Values

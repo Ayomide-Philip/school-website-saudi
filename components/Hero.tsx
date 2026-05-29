@@ -8,10 +8,7 @@ export default function Hero() {
       id="home"
       className="relative w-full min-h-screen bg-white dark:bg-slate-950 overflow-hidden pt-20"
     >
-      {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-600 via-amber-500 to-blue-600" />
-
-      {/* Decorative blobs */}
       <motion.div
         className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-blue-50 dark:bg-blue-950/20 opacity-40 blur-3xl"
         animate={{ scale: [1, 1.1, 1], rotate: [0, 180, 360] }}
@@ -24,16 +21,13 @@ export default function Hero() {
       />
 
       <div className="relative z-10">
-        {/* Main content container */}
         <div className="mx-auto max-w-7xl px-6 py-16">
-          {/* Top section with headline and description */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center mb-16"
           >
-            {/* Small label */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,7 +39,6 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Main headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,7 +51,6 @@ export default function Hero() {
               </motion.span>
             </motion.h1>
 
-            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -71,7 +63,7 @@ export default function Hero() {
               athletics.
             </motion.p>
 
-            {/* CTA Buttons */}
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
