@@ -48,16 +48,14 @@ export default function Navbar() {
             : "bg-white/70 dark:bg-transparent backdrop-blur-md"
         }`}
       >
-        {/* Top bar with border */}
         <div
-          className={`h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-blue-600 ${
+          className={`h-1 bg-linear-to-r from-blue-600 via-amber-500 to-blue-600 ${
             scrolled ? "opacity-100" : "opacity-50"
           } transition-opacity duration-300`}
         />
 
         <div className="mx-auto max-w-7xl px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <Link
               href="#"
               className="flex items-center gap-3 group cursor-pointer"
@@ -65,7 +63,7 @@ export default function Navbar() {
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="h-11 w-11 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-lg shadow-lg"
+                className="h-11 w-11 rounded-full bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-lg shadow-lg"
               >
                 G
               </motion.div>
@@ -79,7 +77,6 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
             <nav className="hidden items-center gap-1 md:flex">
               {navLinks.map((link) => (
                 <motion.a
@@ -97,7 +94,7 @@ export default function Navbar() {
                   {activeLink === link.href && (
                     <motion.div
                       layoutId="activeLink"
-                      className="absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-blue-600 to-amber-500"
+                      className="absolute bottom-1 left-4 right-4 h-0.5 bg-linear-to-r from-blue-600 to-amber-500"
                       transition={{
                         type: "spring",
                         stiffness: 380,
@@ -109,19 +106,17 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Right section */}
             <div className="flex items-center gap-4">
               <Toggle />
               <motion.a
                 href="#apply"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
+                className="hidden rounded-full bg-linear-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 px-7 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all md:inline-block"
               >
                 Apply Now
               </motion.a>
 
-              {/* Mobile menu button */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -136,7 +131,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full-screen Mobile Menu (outside header so fixed covers viewport) */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{
@@ -147,7 +141,6 @@ export default function Navbar() {
         transition={{ duration: 0.3 }}
         className="fixed inset-0 z-50 md:hidden bg-white dark:bg-slate-900"
       >
-        {/* Close button inside overlay */}
         <button
           aria-label="Close menu"
           onClick={() => setOpen(false)}
@@ -155,7 +148,6 @@ export default function Navbar() {
         >
           <X size={20} />
         </button>
-        {/* Menu content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 pt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +155,6 @@ export default function Navbar() {
             transition={{ delay: 0.1 }}
             className="space-y-2"
           >
-            {/* Navigation links */}
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.href}
@@ -180,7 +171,7 @@ export default function Navbar() {
                 }}
                 className={`group block rounded-lg px-6 py-4 text-lg font-semibold transition-all ${
                   activeLink === link.href
-                    ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg"
+                    ? "bg-linear-to-r from-blue-600 to-blue-700 text-white shadow-lg"
                     : "text-slate-900 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                 }`}
               >
@@ -203,10 +194,10 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: open ? 1 : 0 }}
               transition={{ delay: 0.35 }}
-              className="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent my-6"
+              className="h-px bg-linear-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent my-6"
             />
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{
                 opacity: open ? 1 : 0,
@@ -219,7 +210,7 @@ export default function Navbar() {
                 Dark Mode
               </span>
               <Toggle />
-            </motion.div>
+            </motion.div> */}
 
             <motion.a
               href="#apply"
@@ -232,7 +223,7 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="block w-full rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 dark:from-blue-600 dark:via-blue-600 dark:to-blue-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all"
+              className="block w-full rounded-full bg-linear-to-r from-blue-600 via-blue-600 to-blue-700 dark:from-blue-600 dark:via-blue-600 dark:to-blue-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all"
             >
               Apply Now
             </motion.a>
