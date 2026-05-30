@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { Mail, Share2, Send, Heart, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
@@ -36,8 +37,12 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center font-semibold text-white">
-                L
+              <div className="h-10 w-10 rounded-full overflow-hidden shadow-md">
+                <img
+                  src="/logo.jpg"
+                  alt="La Petite Ecole logo"
+                  className="h-10 w-10 object-cover"
+                />
               </div>
               <div>
                 <div className="font-semibold text-white">La Petite Ecole</div>

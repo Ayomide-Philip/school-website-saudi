@@ -62,10 +62,14 @@ export default function Navbar() {
               onClick={() => handleNavClick("#home")}
             >
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="h-11 w-11 rounded-full bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-lg shadow-lg"
+                whileHover={{ scale: 1.05, rotate: 2 }}
+                className="h-11 w-11 rounded-full flex items-center justify-center shadow-lg overflow-hidden bg-transparent"
               >
-                L
+                <img
+                  src="/logo.jpg"
+                  alt="La Petite Ecole logo"
+                  className="h-11 w-11 object-cover"
+                />
               </motion.div>
               <div>
                 <div className="text-sm font-bold text-slate-900 dark:text-white">
