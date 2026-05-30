@@ -31,7 +31,7 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="inline-block mb-4"
             >
-                <span className="text-xs sm:text-sm font-semibold text-white/90 uppercase tracking-widest drop-shadow-lg">
+              <span className="text-xs sm:text-sm font-semibold text-white/90 uppercase tracking-widest drop-shadow-lg">
                 Welcome to La Petite Ecole
               </span>
             </motion.div>
