@@ -4,35 +4,35 @@ import { ArrowRight } from "lucide-react";
 
 const programs = [
   {
-    title: "Elementary School",
-    description: "Building strong foundational skills and fostering curiosity",
-    color: "from-blue-500 to-blue-600",
+    title: "Toddler Care",
+    description: "Warm, attentive care for our youngest learners (18 months+)",
+    color: "from-rose-200 to-rose-300",
   },
   {
-    title: "Junior Secondary",
-    description: "Developing critical thinking and interdisciplinary expertise",
-    color: "from-purple-500 to-purple-600",
+    title: "Nursery (Ages 2–3)",
+    description: "Play-based exploration that builds social and motor skills",
+    color: "from-amber-200 to-amber-300",
   },
   {
-    title: "Senior Secondary",
-    description: "Preparing for higher education and professional careers",
-    color: "from-emerald-500 to-emerald-600",
+    title: "Pre-Kindergarten (Ages 4–5)",
+    description: "Kindness-led early literacy, numeracy and school readiness",
+    color: "from-emerald-200 to-emerald-300",
   },
   {
-    title: "STEM Programs",
-    description: "Hands-on labs, competitions, and innovation challenges",
-    color: "from-orange-500 to-orange-600",
+    title: "Early Literacy & Numeracy",
+    description: "Foundational phonics, story-time and number play activities",
+    color: "from-sky-200 to-sky-300",
   },
   {
-    title: "Arts & Humanities",
-    description: "Creative expression and cultural enrichment",
-    color: "from-pink-500 to-pink-600",
+    title: "Creative Play & Motor Skills",
+    description: "Art, music, sensory play and gross/fine motor development",
+    color: "from-fuchsia-200 to-fuchsia-300",
   },
 ];
 
 export default function Programs() {
   return (
-    <section id="academics" className="w-full bg-white dark:bg-slate-900">
+    <section id="early-years" className="w-full bg-white dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,10 +42,10 @@ export default function Programs() {
           className="text-center mb-16"
         >
           <h3 className="text-4xl font-bold text-slate-900 dark:text-white">
-            Academic Programs
+            Early Years & Nursery Programs
           </h3>
           <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
-            Curated programs designed to unlock each student&apos;s potential
+            Gentle, play-based learning that nurtures curiosity and confidence
           </p>
         </motion.div>
 
