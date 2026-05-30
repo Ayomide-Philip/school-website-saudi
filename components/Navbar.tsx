@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -28,10 +29,11 @@ export default function Navbar() {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#academics", label: "Academics" },
-    { href: "#admissions", label: "Admissions" },
+    // { href: "#academics", label: "Academics" },
     { href: "#gallery", label: "Gallery" },
-    { href: "#contact", label: "Contact" },
+    { href: "#admissions", label: "Admissions" },
+
+    // { href: "#contact", label: "Contact" },
   ];
 
   const handleNavClick = (href: string) => {
