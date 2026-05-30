@@ -6,27 +6,99 @@ const programs = [
   {
     title: "Toddler Care",
     description: "Warm, attentive care for our youngest learners (18 months+)",
-    color: "from-rose-200 to-rose-300",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-6 h-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="12" cy="8" r="2" />
+        <path d="M8 16c1.333-2 6.667-2 8 0" />
+      </svg>
+    ),
   },
   {
     title: "Nursery (Ages 2–3)",
     description: "Play-based exploration that builds social and motor skills",
-    color: "from-amber-200 to-amber-300",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-6 h-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="3" y="11" width="6" height="6" rx="1" />
+        <rect x="9" y="7" width="6" height="6" rx="1" />
+        <rect x="15" y="11" width="6" height="6" rx="1" />
+      </svg>
+    ),
   },
   {
     title: "Pre-Kindergarten (Ages 4–5)",
     description: "Kindness-led early literacy, numeracy and school readiness",
-    color: "from-emerald-200 to-emerald-300",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-6 h-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M2 7c4-2 6-2 10 0v11c-4-2-6-2-10 0z" />
+        <path d="M12 7c4-2 6-2 10 0v11c-4-2-6-2-10 0z" />
+      </svg>
+    ),
   },
   {
     title: "Early Literacy & Numeracy",
     description: "Foundational phonics, story-time and number play activities",
-    color: "from-sky-200 to-sky-300",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-6 h-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 6h16" />
+        <path d="M4 12h6" />
+        <path d="M4 18h10" />
+      </svg>
+    ),
   },
   {
     title: "Creative Play & Motor Skills",
     description: "Art, music, sensory play and gross/fine motor development",
-    color: "from-fuchsia-200 to-fuchsia-300",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-6 h-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M9 19V6l12-2v11" />
+        <circle cx="6" cy="18" r="3" />
+      </svg>
+    ),
   },
 ];
 
@@ -60,14 +132,8 @@ export default function Programs() {
               whileHover={{ y: -6 }}
               className="group rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg border border-slate-100 dark:border-slate-700 overflow-hidden"
             >
-              <div
-                className={`absolute inset-0 bg-linear-to-br ${program.color} opacity-0 group-hover:opacity-5 transition-opacity`}
-              />
-
-              <div
-                className={`inline-block rounded-lg bg-linear-to-br ${program.color} p-3 text-white`}
-              >
-                <div className="w-6 h-6" />
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white p-2">
+                {program.icon}
               </div>
 
               <h4 className="mt-6 text-xl font-semibold text-slate-900 dark:text-white">
