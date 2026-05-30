@@ -37,13 +37,10 @@ export default function Footer() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="h-10 w-10 rounded-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center font-semibold text-white">
-                G
+                L
               </div>
               <div>
-                <div className="font-semibold text-white">Greenfield</div>
-                <div className="text-xs text-blue-200">
-                  International Academy
-                </div>
+                <div className="font-semibold text-white">La Petite Ecole</div>
               </div>
             </div>
             <p className="text-sm text-white/75">
@@ -154,7 +151,7 @@ export default function Footer() {
         >
           <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <p className="text-sm text-white/75">
-              © {new Date().getFullYear()} Greenfield International Academy. All
+              © {new Date().getFullYear()} La Petite Ecole. All
               rights reserved.
             </p>
             <div className="flex items-center gap-4 text-white/75">

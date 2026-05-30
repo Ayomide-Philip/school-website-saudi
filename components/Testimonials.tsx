@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Aisha Al-Fahad",
     role: "Parent",
-    text: "The teachers at Greenfield unlock potential and inspire confidence. My daughter has grown tremendously.",
+    text: "The teachers at La Petite Ecole unlock potential and inspire confidence. My daughter has grown tremendously.",
     img: "/images/online/testimonial-1.jpg",
     rating: 5,
   },

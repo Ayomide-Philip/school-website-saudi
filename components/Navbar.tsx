@@ -65,14 +65,11 @@ export default function Navbar() {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 className="h-11 w-11 rounded-full bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-lg shadow-lg"
               >
-                G
+                L
               </motion.div>
               <div>
                 <div className="text-sm font-bold text-slate-900 dark:text-white">
-                  Greenfield
-                </div>
-                <div className="text-xs font-medium text-blue-600 dark:text-blue-300">
-                  International Academy
+                  La Petite Ecole
                 </div>
               </div>
             </Link>

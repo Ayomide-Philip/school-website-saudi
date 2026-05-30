@@ -31,8 +31,7 @@ export default function CTA() {
                   Admissions Open for 2026
                 </h2>
                 <p className="mt-3 text-lg text-blue-100">
-                  Secure your child&apos;s place at Greenfield International
-                  Academy today. Limited spots available.
+                  Secure your child&apos;s place at La Petite Ecole today. Limited spots available.
                 </p>
               </motion.div>
 

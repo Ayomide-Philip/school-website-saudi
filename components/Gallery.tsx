@@ -26,7 +26,7 @@ export default function Gallery() {
             Campus Gallery
           </h3>
           <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
-            A glimpse into the vibrant life at Greenfield
+            A glimpse into the vibrant life at La Petite Ecole
           </p>
         </motion.div>
 

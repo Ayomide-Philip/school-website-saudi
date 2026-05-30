@@ -78,7 +78,7 @@ export default function About() {
           >
             <img
               src="/images/online/about-campus.jpg"
-              alt="Greenfield Academy Campus"
+              alt="La Petite Ecole Campus"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/30 via-transparent to-transparent" />

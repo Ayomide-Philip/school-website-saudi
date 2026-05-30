@@ -31,8 +31,8 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="inline-block mb-4"
             >
-              <span className="text-xs sm:text-sm font-semibold text-white/90 uppercase tracking-widest drop-shadow-lg">
-                Welcome to Greenfield
+                <span className="text-xs sm:text-sm font-semibold text-white/90 uppercase tracking-widest drop-shadow-lg">
+                Welcome to La Petite Ecole
               </span>
             </motion.div>
 
@@ -54,10 +54,9 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-base sm:text-lg text-white/95 mb-6 sm:mb-8 leading-relaxed drop-shadow-lg"
             >
-              At Greenfield International Academy, we nurture curious minds,
-              build strong character, and prepare students for success in a
-              rapidly changing world — excellence across academics, arts, and
-              athletics.
+              At La Petite Ecole, we nurture curious minds, build strong
+              character, and prepare students for success in a rapidly changing
+              world — excellence across early-years learning and care.
             </motion.p>
 
             <motion.div
